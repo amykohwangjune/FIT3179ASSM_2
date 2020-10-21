@@ -9,6 +9,21 @@
       "type":"csv"
     }
   },
+  "params": [
+    {
+      "name": "GDP_per_Capita",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 1.6,
+        "step": 0.1
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.GDPperCapita > GDP_per_Capita"}
+  ],
   "layer": [
     {
       "mark": "point",
@@ -51,11 +66,21 @@
   "encoding": {
     "x": {
       "field": "SocialSupport",
-      "type": "quantitative"
+      "type": "quantitative",
+      "scale": {
+        "type": "linear",
+        "domain": [0,1.8]
+      },
+      "title": "Social Support"
     },
     "y": {
       "field": "FreedomToMakeChoices",
-      "type": "quantitative"
+      "type": "quantitative",
+      "scale": {
+        "type": "linear",
+        "domain": [0,0.7]
+      },
+      "title": "Freedom To Make Choices"
     },
     "tooltip": [
       {"field": "CountryOrRegion", "type": "nominal", "title": "Country"},
