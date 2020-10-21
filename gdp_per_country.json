@@ -19,21 +19,21 @@
             "type":"csv"
           }
         },
-        "key": "Country or region",
-        "fields": ["GDP per capita"]
+        "key": "CountryOrRegion",
+        "fields": ["GDPperCapita"]
       }
     }
   ],
   "mark": {"type":"geoshape"},
   "encoding": {
     "color": {
-      "field": "GDP per capita",
+      "field": "GDPperCapita",
       "type":"quantitative",
       "scale": {"type":"linear"}
     },
     "tooltip": [
       {"field": "properties.admin", "type": "nominal", "title": "Country"},
-      {"field": "GDP per capita", "type": "quantitative", "title": "GDP", "format": ".2f"}
+      {"field": "GDPperCapita", "type": "quantitative", "title": "GDP", "format": ".2f"}
     ]
   }
 }
