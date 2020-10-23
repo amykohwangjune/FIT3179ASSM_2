@@ -1,0 +1,46 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 500,
+  "height": 400,
+  "title": "A scatterplot showing the generosity vs Social Support for various country",
+  "data": {
+    "url": "https://raw.githubusercontent.com/amykohwangjune/FIT3179_ASSM2/main/2019.csv",
+    "format":{"type": "csv"}
+  },
+  "layer": [
+    {
+      "mark": "point",
+      "encoding": {
+        "x": {"field": "SocialSupport", "type": "quantitative"},
+        "y": {"field": "Generosity", "type": "quantitative"},
+        "color": {
+          "condition": {
+            "test": "datum.CountryOrRegion == 'Finland'",
+            "value": "red"
+          },
+          "value": "grey"
+        }
+      }
+    },
+    {
+      "mark": {"type": "errorband", "extent": "stdev", "opacity": 0.2},
+      "encoding": {
+        "y": {
+          "field": "Generosity",
+          "type": "quantitative",
+          "title": "Generosity"
+        }
+      }
+    },
+    {
+      "mark": "rule",
+      "encoding": {
+        "y": {
+          "field": "Generosity",
+          "type": "quantitative",
+          "aggregate": "mean"
+        }
+      }
+    }
+  ]
+}
