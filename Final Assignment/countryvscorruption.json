@@ -36,7 +36,7 @@
         "test": "datum.CountryOrRegion == 'Finland'",
         "value": "blue"
       },
-      "value": "lightgrey"
+      "value": "#ececec"
     },
     "tooltip": [
       {"field": "CountryOrRegion", "type": "nominal", "title": "Country"},
