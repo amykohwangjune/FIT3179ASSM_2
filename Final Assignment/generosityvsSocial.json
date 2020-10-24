@@ -21,7 +21,7 @@
         "color": {
           "condition": {
             "test": "datum['Country name'] == 'Finland'",
-            "value": "red"
+            "value": "blue"
           },
           "value": "lightgrey"
         },
