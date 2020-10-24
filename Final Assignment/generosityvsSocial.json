@@ -2,45 +2,67 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "width": 500,
   "height": 400,
-  "title": "A scatterplot showing the generosity vs Social Support for various country",
+  "title": "Generosity for Finland over the past few years",
   "data": {
-    "url": "https://raw.githubusercontent.com/amykohwangjune/FIT3179_ASSM2/main/2019.csv",
+    "url": "https://raw.githubusercontent.com/amykohwangjune/FIT3179_ASSM2/main/happinessData.csv",
     "format":{"type": "csv"}
   },
   "layer": [
     {
-      "mark": "point",
+      "mark": {
+        "type": "line"
+      },
       "encoding": {
-        "x": {"field": "SocialSupport", "type": "quantitative"},
-        "y": {"field": "Generosity", "type": "quantitative"},
+        "size": {
+          "field": "Country name",
+          "type": "nominal",
+          "legend": null
+        },
         "color": {
           "condition": {
-            "test": "datum.CountryOrRegion == 'Finland'",
+            "test": "datum['Country name'] == 'Finland'",
             "value": "red"
           },
-          "value": "grey"
+          "value": "lightgrey"
+        },
+        "opacity": {
+          "condition": {
+            "test": "datum['Country name'] == 'Finland'",
+            "value": 1
+          },
+          "value": 0.2
         }
       }
     },
     {
-      "mark": {"type": "errorband", "extent": "stdev", "opacity": 0.2},
+      "mark": {
+        "type": "text",
+        "fontStyle": "italic",
+        "fontWeight": "bold",
+        "fontSize": 11,
+        "align": "center",
+        "baseline": "middle",
+        "dy": -12
+      },
+      "transform": [
+        {"filter": "datum['Country name'] == 'Finland'"}
+      ],
       "encoding": {
-        "y": {
-          "field": "Generosity",
-          "type": "quantitative",
-          "title": "Generosity"
-        }
-      }
-    },
-    {
-      "mark": "rule",
-      "encoding": {
-        "y": {
-          "field": "Generosity",
-          "type": "quantitative",
-          "aggregate": "mean"
-        }
+        "text": {"field": "Generosity", "format": ".2f"}
       }
     }
-  ]
+  ],
+  "encoding": {
+    "x": {
+      "timeUnit": "year", "field": "Year", "title": "Year"
+    },
+    "y": {
+      "aggregate": "mean", "field": "Generosity", "type": "quantitative", "title": "Generosity Level"
+    },
+    "tooltip": [
+      {"field": "Country name", "type": "nominal", "title": "Country"},
+      {"field": "Year", "type": "temporal", "title": "Year"},
+      {"field": "Generosity", "type": "quantitative", "title": "Generosity Level"}
+    ]
+  }
 }
