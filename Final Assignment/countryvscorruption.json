@@ -34,7 +34,7 @@
     "color": {
       "condition": {
         "test": "datum.CountryOrRegion == 'Finland'",
-        "value": "red"
+        "value": "blue"
       },
       "value": "lightgrey"
     },
