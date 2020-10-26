@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 500,
-  "height": 400,
+  "width": 400,
+  "height": 300,
   "title": "Social Support vs Freedom to Make Choices in Finland 2019",
   "data": {
     "url": "https://raw.githubusercontent.com/amykohwangjune/FIT3179_ASSM2/main/2019.csv",
