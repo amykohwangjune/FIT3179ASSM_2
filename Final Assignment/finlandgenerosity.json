@@ -1,5 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 500,
+  "height": 400,
   "title": "Generosity for Finland over the past few years",
   "data": {
     "url": "https://raw.githubusercontent.com/amykohwangjune/FIT3179_ASSM2/main/happinessData.csv",
