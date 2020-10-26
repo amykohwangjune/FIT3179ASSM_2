@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 500,
+  "width": 670,
   "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/amykohwangjune/FIT3179_ASSM2/main/worldmap.json",
