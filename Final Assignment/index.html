@@ -11,32 +11,42 @@
   <!-- Import pure.css -->
   <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Google font -->
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
-    
+  
   <!-- custom style -->
   <style>
-    *{
-      font-family: 'Source Sans Pro', sans-serif;
-    }
-    h1{
-      font-weight: 900;
-    }
+     h1 {
+       text-decoration: overline;
+       letter-spacing: 7px;
+       color: #0A1172;
+       font-size: 55px
+     }
+     .serif {
+       font-family: Courier New;
+     }
+     h2 {
+       color: #0A1172;
+       letter-spacing: 1px;
+       font-size: 25px
+     }
+     p {
+       font-size: 14px
+       font-family: "Trebuchet MS", Helvetica, sans-serif
+     }
+     p.b {
+       font-family: "Trebuchet MS", Helvetica, sans-serif
+     }
      body{
-       background-color: lightgray;
+       background-color: #D6EAF8
      }
      .page{
-       width: 850px;    
+       width: 900px;    
        background-color: white;   
        margin: auto;
-       padding: 50px;
-       padding-top: 35px;
-    }
-    .vis-container{
-      width: 100%;
+       padding: 40px;
+       padding-top: 40px;
     }
     .description h2, h1{
-      margin-top:0px;
+      margin-top:5px;
     }
     .description-right {
       padding-left: 20px;
@@ -44,88 +54,144 @@
     .description-left{
       padding-right: 20px;
     }
-    .pure-g{
-      margin-bottom: 25px;
-    }
     .small-font{
-        font-size: 14px;
+        font-size: 12px;
+    }
+    .pure-g{
+      margin-bottom: 20px;
     }
   </style>
 </head>
 
-<body style="background-color: powerblue;">
-
+<body>
  <div class="page">
 
    <!-- pure grid group -->
     <div class="pure-g">
       <div class="pure-u-1-1">
-        <h1 style="text-align: center">--- All about FINLAND ---</h1>
-        <p>This page demonstrates how you can use pure.css grid for your layout.</p>
+        <h1 class="serif", style="text-align: center">about FINLAND</h1>
+        <p style="text-align: justify", class="b">In the year 2019, Finland was named as the happiest place on Earth for the second year in a row.
+	   Finland has long been praised by a multitude of international bodies for its extensive welfare benefits,
+	   low levels of corruption, well-functioning democracy,
+	   and its instilled sense of freedom and autonomy.
+           Finland has progressive taxation and wealth redistribution, which enables free healthcare, 
+           free quality education for all and generous parental leave. A healthy work-life balance ensures that 
+           people have the chance to pursue their personal interests and feed their creativity whilst enjoying the world’s 
+           cleanest air and pristine nature.</p>
       </div>
     </div>
   <!-- end pure grid group -->
+</body>
 
-    <!-- pure grid group -->
+<h5>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</h5>
+
+<body>
+    <!-- pure grid group 1 -->
     <div class="pure-g">
-        <div class="pure-u-1-3">
+        <div class="pure-u-1-1">
           <div class="description description-left">
-            <h2>VARIOUS COUNTRY [ G D P ]</h2>
-            <p>The first column is used for description while the next two columns are merged and used for visualisation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+            <h2 class="serif"> > VARIOUS COUNTRY GDP</h2>
           </div>
         </div>
-        <div class="pure-u-2-3">
+        <div class="pure-u-1-1" align='center'>
+          <p class="b", style="text-align: justify">According to 2020 Index of Economic Freedom, they said that Finland's economic freedom score is around 78% which indeed making its economy the 20th freest in the 2020 index.
+                       Finland is ranked 11/45 in Europe region, and its overall score is well above the regional and world averages stated by 2020 Index of Economic Freedom.
+                       The Finnish economy has benefited from gradually rising economic freedom over the life of the Index. GDP growth has been positive but modest.</p><br>
           <div id="vis1" class="vis-container"></div>
         </div>
     </div>
     <!-- end pure grid group -->
+</body>
 
-    <!-- pure grid group -->
+<br>
+<h5>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</h5>
+
+<body>
+    <!-- pure grid group 2 -->
     <div class="pure-g">
-        <div class="pure-u-2-3">
+        <div class="pure-u-3-5">
           <div id="vis2"  class="vis-container"></div>
         </div>
-        <div class="pure-u-1-3">
-          <div class="description description-right">
-            <h2>This is the second section</h2>
-            <p>Similar to the previous section, but the colum partition is swapped. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+        <div class="pure-u-2-5">
+          <div class="description description-right"><br><br><br>
+            <h2 class="serif"> > Perception of Corruption?</h2>
+            <p class="b", style="text-align: justify">According to Good News From Finland (2019), they stated the corruption uses a scale of 0 to 100, with 0 meaning highly corrupt and 100 being very clean.
+                         As you all can see Finland get 39% which is consider not so corrupted among the country selected.
+                         Finland located at the top 5 most less corruption in the year 2019. Finland had gain a 3rd place with a score of 85 in the year 2018.</p>
           </div>
         </div>
-      
     </div>
     <!-- end pure grid group -->
+</body>
 
-    <!-- pure grid group -->
+<br>
+<h5>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</h5>
+
+<body>
+    <!-- pure grid group 3 -->
     <div class="pure-g">
       <div class="pure-u-1-3">
-        <div class="description description-left">
-          <h2>This is the third section</h2>
-          <p>Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+        <div class="description description-left"><br><br><br><br><br><br>
+          <h2 class="serif"> > Generosity Level over the past few years</h2>
+          <p class="b", style="text-align: justify">The generosity level from the chart is calculated based on the negative to positive scale.
+                       In this case, we mean by the higher the scale the generous a country was.
+                       When you saw the chart beside, the generosity level for Finland had been decrease over the past few years.
+                       But this doesn't affect the happiness of the citizens in their country.</p>
         </div>
       </div>
-      <div class="pure-u-1-3">
-        <div id="vis4"  class="vis-container"></div>
-      </div>
-      <div class="pure-u-1-3">
+      <div class="pure-u-2-3">
         <div id="vis3"  class="vis-container"></div>
       </div>
     
     </div>
     <!-- end pure grid group -->
-  
+</body>
+
+<br>
+<h5>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</h5>
+
+<body>
+    <!-- pure grid group 4 -->
     <div class="pure-g">
+        <div class="pure-u-3-5">
+          <div id="vis4"  class="vis-container"></div>
+        </div>
+        <div class="pure-u-2-5">
+          <div class="description description-right"><br><br><br><br>
+            <h2 class="serif"> > Social Support & Freedom to make Choices</h2>
+            <p class="b", style="text-align: justify">Finland had almost the highest scale in social support and personal freedom among the 186 countries.
+                         There are some organisation and financing of social support for people with dementia and careers based on Alzheimer Europe (2009).
+                         The services and support are basically funded through general taxation from the citizens Alzheimer Europe (2009).</p>
+          </div>
+        </div>
+    </div>
+    <!-- end pure grid group -->
+</body>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<body>
+    <div class="pure-g" style="text-align: right">
       <div class="pure-u-1-1 small-font">
-        <p>This visualisation is created by <a href="https://github.com/KadekSatriadi" target="_blank">Kadek Satriadi</a>. The datasource is <a href="#"" target="_blank">some data repository online</href>.</p>
+        <p>This visualisation is created by <a href="https://github.com/amykohwangjune" target="_blank">Amy Wang June Koh</a>. The datasource is from <a href="https://www.kaggle.com/mathurinache/world-happiness-report" target="_blank">Kaggle</a> and <a href="https://worldhappiness.report/ed/2019/" target="_blank">WER</a>.</href></p>
       </div>
     </div>
-  
-
+    <div class="pure-g" style="text-align: right">
+      <div class="pure-u-1-1 small-font">
+        <p>Here will be the <a href="https://amykohwangjune.github.io/FIT3179_ASSM2/Final%20Assignment/references.html" target="_blank">Bibliography</a></href>.</p>
+      </div>
+    </div>
   </div> <!-- end page -->
-   
+
+
 <script type="text/javascript">
   var specVis1 = "https://amykohwangjune.github.io/FIT3179_ASSM2/Final Assignment/gdpvsCountry.json";
   var specVis2= "https://amykohwangjune.github.io/FIT3179_ASSM2/Final Assignment/countryvscorruption.json";
-  var specVis3 = "https://amykohwangjune.github.io/FIT3179_ASSM2/Final Assignment/generosityvsSocial.json";
+  var specVis3 = "https://amykohwangjune.github.io/FIT3179_ASSM2/Final Assignment/finlandgenerosity.json";
   var specVis4= "https://amykohwangjune.github.io/FIT3179_ASSM2/Final Assignment/socialvsfreedom.json";
 
   vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
