@@ -9,31 +9,35 @@
       "feature": "map"
     }
   },
-  "transform": [
+  "projection": {"type":"equalEarth"},
+  "layer": [
     {
-      "lookup": "properties.admin",
-      "from": {
-        "data": {
-          "url": "https://raw.githubusercontent.com/amykohwangjune/FIT3179_ASSM2/main/2019.csv",
-          "format": {
-            "type":"csv"
+      "mark": {"type": "geoshape", "fill":"lightblue", "stroke": "white"}
+    },
+    {
+      "transform": [
+        {
+          "lookup": "properties.admin",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/amykohwangjune/FIT3179_ASSM2/main/2019.csv",
+              "format": {
+                "type":"csv"
+              }
+            },
+            "key": "CountryOrRegion",
+            "fields": ["GDPperCapita"]
           }
-        },
-        "key": "CountryOrRegion",
-        "fields": ["GDPperCapita"]
+        }
+      ],
+      "mark": {"type": "geoshape"},
+      "encoding": {
+        "color": {"field": "GDPperCapita", "type":"quantitative", "scale": {"type":"linear"}, "legend": {"title": "GDP per Capita"}},
+        "tooltip": [
+          {"field": "properties.admin", "type": "nominal", "title": "Country"},
+          {"field": "GDPperCapita", "type": "quantitative", "title": "GDP", "format": ".2f"}
+        ]
       }
     }
-  ],
-  "mark": {"type":"geoshape"},
-  "encoding": {
-    "color": {
-      "field": "GDPperCapita",
-      "type":"quantitative",
-      "scale": {"type":"linear"}
-    },
-    "tooltip": [
-      {"field": "properties.admin", "type": "nominal", "title": "Country"},
-      {"field": "GDPperCapita", "type": "quantitative", "title": "GDP", "format": ".2f"}
-    ]
-  }
+  ]
 }
