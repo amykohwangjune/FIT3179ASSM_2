@@ -57,7 +57,7 @@
       "timeUnit": "year", "field": "Year", "title": "Year"
     },
     "y": {
-      "aggregate": "mean", "field": "Generosity", "type": "quantitative", "title": "Generosity Level"
+      "aggregate": "mean", "field": "Generosity", "type": "quantitative", "title": "Generosity Level (-ve to +ve Scale)"
     },
     "tooltip": [
       {"field": "Country name", "type": "nominal", "title": "Country"},
