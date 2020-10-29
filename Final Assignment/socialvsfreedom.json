@@ -81,11 +81,13 @@
   "encoding": {
     "x": {
       "field": "SocialSupport",
-      "type": "quantitative"
+      "type": "quantitative",
+      "title": "Social Support (By Scaling)"
     },
     "y": {
       "field": "FreedomToMakeChoices",
-      "type": "quantitative"
+      "type": "quantitative",
+      "title": "Freedom To Make Choices (By Scaling)"
     },
     "tooltip": [
       {"field": "CountryOrRegion", "type": "nominal", "title": "Country"},
